@@ -29,7 +29,8 @@ public class TicTacToeGame extends Application {
 
 		Label Currentplayer = new Label("Current Player: " + game.getCurrentPlayer());
 		Currentplayer.setFont(new Font(30));
-
+		
+		
 		Button b1 = new Button();
 		b1.setMinSize(200, 200);
 		b1.setFont(new Font(60));
