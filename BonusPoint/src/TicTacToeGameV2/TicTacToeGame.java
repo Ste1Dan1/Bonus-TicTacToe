@@ -22,6 +22,7 @@ public class TicTacToeGame extends Application {
 		view = new TicTacToeView(primaryStage, model);
 		controller = new TicTacToeController(model, view);
 		view.start();
+		
 	}
 
 	@Override
