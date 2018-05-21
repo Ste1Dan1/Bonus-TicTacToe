@@ -10,7 +10,10 @@ import java.net.Socket;
 import java.util.logging.Logger;
 
 public class TicTacToeServer {
-
+	
+	public TicTacToeServer(int p){
+		this.startServer(p);
+	}
 	private final Logger logger = Logger.getLogger("");
 	int port;
 

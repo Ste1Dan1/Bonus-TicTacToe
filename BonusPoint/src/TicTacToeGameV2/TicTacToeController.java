@@ -18,29 +18,30 @@ public class TicTacToeController implements EventHandler<ActionEvent> {
 		this.model = model;
 		this.view = view;
 
-		
+		view.createbtn.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent e) {
+				TicTacToeServer server = new TicTacToeServer(Integer.parseInt(view.createporttf.getText()));
+			}
+		});
+
 		for (int i = 0; i < view.buttons.length; i++) {
 			for (int j = 0; j < view.buttons.length; j++) {
 				view.buttons[i][j].setOnAction(this);
 			}
 		}
 
-		
 		view.againbtn.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent e) {
-					model.resetGameBoard();
-					for (int i = 0; i < view.buttons.length; i++) {
-						for (int j = 0; j < view.buttons.length; j++) {
-							view.buttons[i][j].setText(null);
-						}
+				model.resetGameBoard();
+				for (int i = 0; i < view.buttons.length; i++) {
+					for (int j = 0; j < view.buttons.length; j++) {
+						view.buttons[i][j].setText(null);
 					}
-				
+				}
+
 			}
 		});
-		
-		
-		
-		
+
 	}
 
 	/*
